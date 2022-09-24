@@ -1,6 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 
+const { VuetifyPlugin } = require('webpack-plugin-vuetify');
+
 const baseFolder =
     process.env.APPDATA !== undefined && process.env.APPDATA !== ''
         ? `${process.env.APPDATA}/ASP.NET/https`
