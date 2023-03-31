@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-img src="https://piuimages.arroweclip.se/eclipse/eclipse.png"></v-img>
+        <v-img src="https://piuimages.arroweclip.se/eclipse/eclipse.png" max-width="600" class="mx-auto"></v-img>
         <v-btn style="position:fixed;right:145px;bottom:15px;"
                fab
                small
