@@ -1,7 +1,37 @@
 <template>
     <div>
-        <v-img src="https://piuimages.arroweclip.se/eclipse/eclipse.png" max-width="600" class="mx-auto"></v-img>
-        <v-btn style="position:fixed;right:145px;bottom:15px;"
+        <v-cotainer>
+            <v-row>
+                <v-col cols="12" sm="5" md="4">
+
+                    <v-img src="https://piuimages.arroweclip.se/eclipse/logo.png"></v-img>
+                </v-col>
+                <v-col cols="12" sm="7" md="8">
+                    <v-list lines="one">
+                        <v-list-item title="What?">
+                            <v-list-item-subtitle style="padding-top:21px; padding-bottom:21px;">
+                                The largest Rhythm Gaming Event in Maryland!
+                            </v-list-item-subtitle>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-list-item-title>Where?</v-list-item-title>
+                            <v-list-item-subtitle>
+                                110 S Eutaw St, Baltimore, MD 21201
+                                <v-btn icon="mdi-map" href="https://goo.gl/maps/3JSEFrujBeJEvmxf6" variant="text" color="primary" target="_blank">
+                                </v-btn>
+                            </v-list-item-subtitle>
+                        </v-list-item>
+                        <v-list-item title="When?">
+                            <v-list-item-subtitle style="padding-top:21px; padding-bottom:21px;">
+                                December 8th-10th, 2023
+                            </v-list-item-subtitle>
+
+                        </v-list-item>
+                    </v-list>
+                </v-col>
+            </v-row>
+        </v-cotainer>
+        <v-btn style="position:fixed;left:145px;bottom:15px;"
                fab
                small
                target="_blank"
@@ -9,7 +39,7 @@
                icon="mdi-twitter"
                color="primary">
         </v-btn>
-        <v-btn style="position:fixed;right:80px;bottom:15px;"
+        <v-btn style="position:fixed;left:80px;bottom:15px;"
                fab
                small
                target="_blank"
@@ -17,7 +47,7 @@
                icon="mdi-discord"
                color="primary">
         </v-btn>
-        <v-btn style="position:fixed;right:15px;bottom:15px;"
+        <v-btn style="position:fixed;left:15px;bottom:15px;"
                fab
                small
                target="_blank"
@@ -26,54 +56,7 @@
                color="primary">
         </v-btn>
     </div>
-    
-    <!--<v-parallax src="https://piuimages.arroweclip.se/eclipse/eclipse.png">
-        <div>
-            <div style="height:150px"></div>
-            <div class="d-flex flex-column fill-height justify-center align-center text-white">
-                <h1 class="text-h1 font-weight-thin mb-4">
-                    Eclipse
-                </h1>
-                <h4 class="subheading">
-                    March 23rd-26th, Baltimore, MD
-                </h4>
-            </div>
-            <div style="height:100px"></div>
-            <v-sheet color="black">
-                <h3 style="padding-left:10px;">News</h3>
-                <v-carousel v-model="CarouselIndex"
-                            show-arrows="hover"
-                            hide-delimiters>
-                    <v-carousel-item v-for="slide in Slides"
-                                     :key="slide">
-                        <v-container>
-                            <v-row>
-                                <v-col v-for="news in ShowingNews" xs="4" :key="news.Title">
-                                    <v-card>
-                                        <v-img :src="news.Image" height="200px" cover></v-img>
-                                        <v-card-title>{{news.Title}}</v-card-title>
-                                        <v-card-subtitle>{{news.Content}}</v-card-subtitle>
-                                        <v-card-actions v-if="news.Link!=''">
-                                            <v-btn variant="outlined"
-                                                    color="primary"
-                                                    :href="news.Link">
-                                                {{news.LinkText}}
-                                            </v-btn>
-                                        </v-card-actions>
-                                    </v-card>
-                                </v-col>
-                                <v-col v-if="ShowingNews.length==0" xs="4">
 
-                                </v-col>
-                                <v-col v-if="ShowingNews.length==1" xs="4"></v-col>
-                                <v-col v-if="ShowingNews.length==2" xs="4"></v-col>
-                            </v-row>
-                        </v-container>
-                    </v-carousel-item>
-                </v-carousel>
-            </v-sheet>
-        </div>
-    </v-parallax>-->
 </template>
 
 <script lang="ts">
